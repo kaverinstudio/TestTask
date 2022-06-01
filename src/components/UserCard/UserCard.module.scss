@@ -1,0 +1,18 @@
+.card_body{
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  .email, .name, .position{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.img_wrapper{
+  display: flex;
+  justify-content: center;
+}

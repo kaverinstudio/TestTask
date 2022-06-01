@@ -1,0 +1,22 @@
+.mBtn{
+    height: 34px;
+    width: 100px;
+    border: none;
+    border-radius: 80px;
+    background: #F4E041;
+    font-family: 'Nunito', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+    margin: 13px 0 0 10px;
+    cursor: pointer;
+    &:hover{
+        background: #FFE302;
+    }
+    &:disabled{
+        background: #B4B4B4;
+        color: #FFFFFF;
+    }
+}

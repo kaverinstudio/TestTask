@@ -1,0 +1,20 @@
+@import "~normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+body{
+    background-color: #E5E5E5;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header-main{
+    background-color: #FFFFFF !important;
+    height: 60px;
+    box-shadow: none !important;
+    color: #000000 !important;
+}
+@media screen and (min-width: 1170px){
+    .my-container{
+        padding: 0 !important;
+    }
+}

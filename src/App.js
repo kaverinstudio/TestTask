@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserList from './components/pages/UserList'
+import { AppBar, Container, Grid } from "@mui/material";
+import './app.css'
+import { MyButton } from "./UI/buttons/MyButton";
+import logo from './assets/img/Logo.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <AppBar position={'static'} className={'header-main'}>
+        <Container className={'my-container'}>
+          <Grid container spacing={0}>
+            <Grid item xs={3}>
+              <img src={logo} alt={'logo'} style={{ marginTop: 17 }} />
+            </Grid>
+            <Grid item xs={9} display={'flex'} justifyContent={'flex-end'} alignItems={'baseline'}>
+              <MyButton>Users</MyButton>
+              <MyButton>Sign up</MyButton>
+            </Grid>
+          </Grid>
+        </Container>
+      </AppBar>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<UserList />} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
