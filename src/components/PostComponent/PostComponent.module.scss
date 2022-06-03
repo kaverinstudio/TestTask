@@ -2,14 +2,14 @@
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 40px !important;
+  line-height: 40px !important;
   color: #000000;
   text-align: center;
   padding: 140px 0 50px;
 }
 form{
-  width: 380px;
+  max-width: 380px;
   margin: 0 auto;
   .button{
     width: 100%;
@@ -40,7 +40,7 @@ form{
       color: #000000;
       text-align: center;
       line-height: 53px;
-      width: 83px;
+      width: 80px;
       height: 100%;
       background: transparent;
       border: 1px solid rgba(0, 0, 0, 0.87);
@@ -52,11 +52,10 @@ form{
   }
   .formBtn{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 34px;
   }
 }
 .form{
-
   .input{
     margin-bottom: 50px;
     position: relative;
@@ -66,7 +65,7 @@ form{
   }
 }
 .file_input{
-  margin-bottom: 50px;
+  margin-top: 46px;
   position: relative;
   .error_message{
     font-family: "Roboto","Helvetica","Arial",sans-serif;

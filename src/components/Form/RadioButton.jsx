@@ -6,6 +6,28 @@ import Radio from "@mui/material/Radio";
 import {useDispatch, useSelector} from "react-redux";
 import {userAPI} from "../../actions/users";
 
+const stylePositions = {
+    fontFamily: 'Nunito',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    fontSize: '16px',
+    lineHeight: '24px',
+    color: '#000000',
+}
+
+const styleFormControlLabel = {
+    marginBottom: '-9px',
+}
+
+const styleRadio = {
+    '&, &.MuiRadio-root':{
+        color: '#D0CFCF',
+    },
+    '&, &.Mui-checked': {
+        color: '#00BDD3',
+    }
+}
+
 const RadioButton = forwardRef((props, ref) => {
     const dispatch = useDispatch()
     const positions = useSelector(state => state.users.positions)
@@ -13,7 +35,6 @@ const RadioButton = forwardRef((props, ref) => {
     const [selectPositions, setSelectPositions] = useState(1)
 
     const selected = (e) =>{
-        console.log(e.target.value)
         setSelectPositions(e.target.value)
     }
 
@@ -23,14 +44,14 @@ const RadioButton = forwardRef((props, ref) => {
 
     return (
         <div>
-            <FormLabel id="Positions">Gender</FormLabel>
+            <FormLabel sx={stylePositions} id="Positions">Select your position</FormLabel>
             <RadioGroup
                 value={selectPositions}
                 onChange={selected}
             >
 
                 {positions.map(p =>
-                    <FormControlLabel {...props} inputRef={ref} key={p.id} value={p.id} control={<Radio />} label={p.name} />
+                    <FormControlLabel sx={styleFormControlLabel}  {...props} inputRef={ref} key={p.id} value={p.id} control={<Radio sx={styleRadio} />} label={p.name} />
                 )}
             </RadioGroup>
 

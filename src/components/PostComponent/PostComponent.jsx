@@ -39,7 +39,7 @@ const PostComponent = () => {
             })
             .test("fileSize", "Файл слишком большой", (value) => {
                 if(value && value.length > 0){
-                    return value && value[0].size <= 500000;
+                    return value && value[0].size <= 5000000;
                 }
             })
             .test('Тип файла', 'Не поддерживаемый тип файла', function (value) {
@@ -80,12 +80,11 @@ const PostComponent = () => {
 
         // alert(JSON.stringify(formData))
         reset()
-        document.getElementById('photo-load-text').innerText = '';
+        document.getElementById('photo-load-text').innerText = 'Upload your photo';
     }
 
 
     useEffect(() => {
-        console.log('reload page')
         dispatch(userAPI.getUsers(1, 6))
     }, [dispatch, user])
 
@@ -99,7 +98,7 @@ const PostComponent = () => {
     }
 
     return (
-        <div>
+        <div style={{paddingBottom: "100px"}}>
             <div>
                 <Typography className={style.title} component="h1" variant="h4">Working with POST request</Typography>
             </div>
@@ -133,7 +132,12 @@ const PostComponent = () => {
                         helperText={errors.phone?.message? errors.phone?.message : '+38 (XXX) XXX - XX - XX'}
 
                     />
-
+                    <RadioButton
+                        aria-labelledby="position_id"
+                        name="position_id"
+                        id="position_id"
+                        {...register('position_id')}
+                    />
                     <FileInput
                         {...register('photo')}
                         name="photo"
@@ -142,12 +146,7 @@ const PostComponent = () => {
                         style={{ display: 'none' }}
                     />
                 </div>
-                <RadioButton
-                    aria-labelledby="position_id"
-                    name="position_id"
-                    id="position_id"
-                    {...register('position_id')}
-                />
+
                 <div className={style.formBtn}>
                     <MyButton disabled={!isValid}>Sign up</MyButton>
                 </div>

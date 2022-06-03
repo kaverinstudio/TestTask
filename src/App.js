@@ -13,16 +13,15 @@ function App() {
         <Container className={'my-container'}>
           <Grid container spacing={0}>
             <Grid item xs={3}>
-              <img src={logo} alt={'logo'} style={{ marginTop: 17 }} />
+              <img src={logo} alt={'logo'} style={{ marginTop: 17, width: 104 }} />
             </Grid>
             <Grid item xs={9} display={'flex'} justifyContent={'flex-end'} alignItems={'baseline'}>
-              <MyButton>Users</MyButton>
-              <MyButton>Sign up</MyButton>
+              <MyButton style={{margin: '13px 0 0 10px'}}>Users</MyButton>
+              <MyButton style={{margin: '13px 0 0 10px'}}>Sign up</MyButton>
             </Grid>
           </Grid>
         </Container>
       </AppBar>
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<UserList />} />

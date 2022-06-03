@@ -10,8 +10,8 @@
     font-family: 'Nunito', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 40px !important;
+    line-height: 40px !important;
     color: #000000;
     text-align: center;
     padding: 140px 0 50px;
@@ -45,5 +45,8 @@
     .card_wrapper {
         grid-template-columns: 100%;
         grid-gap: 20px;
+    }
+    .title{
+        letter-spacing: 1px !important;
     }
 }

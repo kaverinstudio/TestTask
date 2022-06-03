@@ -2,6 +2,7 @@ import React from 'react';
 import style from './UserCard.module.scss'
 import {Avatar, Tooltip, tooltipClasses} from "@mui/material";
 import {styled} from "@mui/material/styles";
+import avatar from './../../assets/img/photo-cover.svg'
 const UserCard = (props) => {
     const user = props.user
     const MyTooltip = styled(({ className, ...props }) => (
@@ -22,7 +23,7 @@ const UserCard = (props) => {
             <div className={style.img_wrapper}>
                 <Avatar
                 alt={user.name}
-                src={user.photo}
+                src={user.photo? user.photo : avatar}
                 sx={{width:70, height:70}}
                 />
             </div>
@@ -38,7 +39,7 @@ const UserCard = (props) => {
             <div className={style.email}>{user.email}</div>
             </MyTooltip>
             <MyTooltip title={user.phone}>
-            <div>{user.phone}</div>
+            <div className={style.phone}>{user.phone}</div>
             </MyTooltip>
         </div>
     );

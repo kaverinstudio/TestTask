@@ -43,11 +43,11 @@ const GetComponent = () => {
                         <UserCard key={user.id} user={user} />)
                 }
             </div>
-            <div style={{ textAlign: 'center', marginTop: '50px' }}>
+            <div style={{ textAlign: 'center', marginTop: '34px' }}>
                 {
                     !isFetching ?
                         showButton &&
-                        <MyButton onClick={ShowMoreUsers}>Show more</MyButton>
+                        <MyButton style={{width: 120}} onClick={ShowMoreUsers}>Show more</MyButton>
                         :
                         <div><img src={preloader} alt="preloader" className={style.preloader} /></div>
                 }
