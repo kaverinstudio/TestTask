@@ -18,6 +18,23 @@ const UserCard = (props) => {
             lineHeight: '26px',
         },
     });
+
+    let phone = user.phone;
+    let lenPhone = phone.length;
+    let tt=phone.split('');
+    if(lenPhone === 12){
+        tt.splice(2,"", " (");
+        tt.splice(6,"", ") ");
+        tt.splice(10,"", " ");
+        tt.splice(13,"", " ");
+    }else if(lenPhone === 13){
+        tt.splice(3,"", " (");
+        tt.splice(7,"", ") ");
+        tt.splice(11,"", " ");
+        tt.splice(14,"", " ");
+    }
+    let newtel = tt.join('');
+
     return (
         <div className={style.card_body}>
             <div className={style.img_wrapper}>
@@ -28,18 +45,18 @@ const UserCard = (props) => {
                 />
             </div>
             <div>
-                <MyTooltip title={user.name}>
+                <MyTooltip followCursor={true} title={user.name}>
                 <p className={style.name}>{user.name}</p>
                 </MyTooltip>
             </div>
-            <MyTooltip title={user.position}>
+            <MyTooltip followCursor={true} title={user.position}>
             <div className={style.position}>{user.position}</div>
             </MyTooltip>
-            <MyTooltip title={user.email}>
+            <MyTooltip followCursor={true} title={user.email}>
             <div className={style.email}>{user.email}</div>
             </MyTooltip>
-            <MyTooltip title={user.phone}>
-            <div className={style.phone}>{user.phone}</div>
+            <MyTooltip followCursor={true} title={newtel}>
+            <div className={style.phone}>{newtel}</div>
             </MyTooltip>
         </div>
     );
