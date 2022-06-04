@@ -12,7 +12,6 @@ import backImage360 from './../../assets/img/Rectangle_360.jpg';
 import {MyButton} from "../../UI/buttons/MyButton";
 import GetComponent from "../GetComponent/GetComponent";
 import PostComponent from "../PostComponent/PostComponent";
-import SuccessModal from "../Modal/SuccessModal";
 
 const UserList = () => {
 
@@ -37,7 +36,6 @@ const UserList = () => {
             <Container className={'my-container'}>
                 <GetComponent />
                 <PostComponent />
-                <SuccessModal/>
             </Container>
         </div>
     );
