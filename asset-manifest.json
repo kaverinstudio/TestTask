@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/kaverinstudio/testtask-github-pages/static/css/main.386a43d7.css",
+    "main.js": "/kaverinstudio/testtask-github-pages/static/js/main.f1d2d5f0.js",
+    "static/media/Rectangle.webp": "/kaverinstudio/testtask-github-pages/static/media/Rectangle.514bf9c63c549fa1e764.webp",
+    "static/media/Rectangle.jpg": "/kaverinstudio/testtask-github-pages/static/media/Rectangle.c365818f11533d865d96.jpg",
+    "static/media/Rectangle_1020.webp": "/kaverinstudio/testtask-github-pages/static/media/Rectangle_1020.8c4d2f587fe7766dd1d1.webp",
+    "static/media/Rectangle_1020.jpg": "/kaverinstudio/testtask-github-pages/static/media/Rectangle_1020.8e3a7e0d3a9717fc9f66.jpg",
+    "static/media/Rectangle_768.webp": "/kaverinstudio/testtask-github-pages/static/media/Rectangle_768.d37c68f13a8b7129e563.webp",
+    "static/media/Rectangle_768.jpg": "/kaverinstudio/testtask-github-pages/static/media/Rectangle_768.1771b24cd7142e4e4fd0.jpg",
+    "static/media/Rectangle_360.webp": "/kaverinstudio/testtask-github-pages/static/media/Rectangle_360.70f71f35ce6d686c8162.webp",
+    "static/media/Rectangle_360.jpg": "/kaverinstudio/testtask-github-pages/static/media/Rectangle_360.0252af7ddb2fde1dbb98.jpg",
+    "static/media/success-image.jpg": "/kaverinstudio/testtask-github-pages/static/media/success-image.493b01fc7f094bf50ff9.jpg",
+    "static/media/Logo.svg": "/kaverinstudio/testtask-github-pages/static/media/Logo.8bb55362d01d55393ccc5476d96f0c14.svg",
+    "static/media/photo-cover.svg": "/kaverinstudio/testtask-github-pages/static/media/photo-cover.fb98cf13a87225efe558669bdc541ac7.svg",
+    "index.html": "/kaverinstudio/testtask-github-pages/index.html",
+    "main.386a43d7.css.map": "/kaverinstudio/testtask-github-pages/static/css/main.386a43d7.css.map",
+    "main.f1d2d5f0.js.map": "/kaverinstudio/testtask-github-pages/static/js/main.f1d2d5f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.386a43d7.css",
+    "static/js/main.f1d2d5f0.js"
+  ]
+}
