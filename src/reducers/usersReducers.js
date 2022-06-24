@@ -9,10 +9,10 @@ const defaultState = {
     users: [],
     isFetching: true,
     currentPage: 1,
-    Count: 6,
+    count: 6,
     totalCount: 0,
     positions: [],
-    new_user: false
+    newUser: false
 }
 
 export default function usersReducers(state=defaultState, action){
@@ -30,7 +30,7 @@ export default function usersReducers(state=defaultState, action){
         case SET_COUNT:
             return {
                 ...state,
-                Count: action.payload.count
+                count: action.payload.count
             }
         case SET_TOTAL_COUNT:
             return {
@@ -45,7 +45,7 @@ export default function usersReducers(state=defaultState, action){
         case SET_NEW_USER:
             return {
                 ...state,
-                new_user: action.payload
+                newUser: action.payload
             }
         default:
             return state
@@ -54,7 +54,7 @@ export default function usersReducers(state=defaultState, action){
 
 export const setUsers = (users) => ({type:SET_USERS, payload: users})
 export const setCount = (count) => ({type:SET_COUNT, payload: count})
-export const setTotalCount = (total_count) => ({type:SET_TOTAL_COUNT, payload: total_count})
+export const setTotalCount = (totalCount) => ({type:SET_TOTAL_COUNT, payload: totalCount})
 export const setIsFetching = (bool) => ({type:SET_IS_FETCHING, payload:bool})
 export const setPositions = (positions) => ({type:SET_POSITIONS, payload:positions})
 export const setNewUser = (user) => ({type:SET_NEW_USER, payload:user})

@@ -5,6 +5,7 @@ import { AppBar, Container, Grid } from "@mui/material";
 import './app.css'
 import { MyButton } from "./UI/buttons/MyButton";
 import logo from './assets/img/Logo.svg';
+import SuccessAlert from "./components/SuccessAlert/SuccessAlert";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Route path="/" element={<UserList />} />
         </Routes>
       </BrowserRouter>
-
+      <SuccessAlert/>
     </div>
   );
 }

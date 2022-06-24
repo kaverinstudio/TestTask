@@ -16,7 +16,7 @@ import MyPhoneInput from "../Form/PhoneInput";
 
 const PostComponent = () => {
     const dispatch = useDispatch()
-    const user = useSelector(state => state.users.new_user)
+    const user = useSelector(state => state.users.newUser)
 
     const schema = yup.object().shape({
         name: yup.string().required('Поле не может быть пустым')
@@ -29,7 +29,7 @@ const PostComponent = () => {
             .email("Введите действительный Email адрес"),
         phone: yup.string()
             .required('Поле не может быть пустым')
-            .matches(/^\+38 \(\d{3}\) \d{3}-?\d{2}-?\d{2}$/, 'Номер должен быть в формате: +38 (0XX) XXX - XX - XX'),
+            .matches(/^\+38 \(0\d{2}\) \d{3}-?\d{2}-?\d{2}$/, 'Номер должен быть в формате: +38 (0XX) XXX - XX - XX'),
         photo: yup.mixed()
             .test("required", 'Файл не выбран', (value) => {
                 photoSelected(value)
